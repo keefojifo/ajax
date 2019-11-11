@@ -21,7 +21,7 @@ public class BoardDAOImpl implements BoardDao {
 		ResultSet rs=null;
 		try {
 		con=DBCon.getCon();
-		String sql = "select*from board_info order by bi_num desc";
+		String sql = "select*from board_info3 order by bi_num desc";
 		ps = con.prepareStatement(sql);
 		rs=ps.executeQuery();
 		List<Map<String,String>>boardList=new ArrayList<>();
