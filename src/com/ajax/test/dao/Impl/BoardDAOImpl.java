@@ -22,7 +22,7 @@ public class BoardDAOImpl implements BoardDao{
 		ResultSet rs = null;
 		try {
 			con = DBCon.getCon();
-			String sql = "select * from board_info3 where bi_num=?";
+			String sql = "select * from board_info2 where bi_num=?";
 			ps = con.prepareStatement(sql);
 			ps.setString(1, board.get("biNum"));
 			rs = ps.executeQuery();
@@ -60,7 +60,7 @@ public class BoardDAOImpl implements BoardDao{
 		ResultSet rs = null;
 		try {
 			con = DBCon.getCon();
-			String sql = "select * from board_info3 order by bi_num desc";
+			String sql = "select * from board_info2 order by bi_num desc";
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
 			List<Map<String, String>> boardList = new ArrayList<>();
@@ -93,7 +93,7 @@ public class BoardDAOImpl implements BoardDao{
 		PreparedStatement ps = null;
 		try {
 			con = DBCon.getCon();
-			String sql = "insert into board_info3(bi_num, bi_title, bi_content, ui_num, credat, cretim, moddat,modtim)";
+			String sql = "insert into board_info2(bi_num, bi_title, bi_content, ui_num, credat, cretim, moddat,modtim)";
 			sql += " values(seq_bi_num.nextval, ?, ?, ?, to_char(sysdate,'YYYYMMDD'), to_char(sysdate,'HH24MISS'),to_char(sysdate,'YYYYMMDD'), to_char(sysdate,'HH24MISS'))";
 			ps = con.prepareStatement(sql);
 			ps.setString(1, board.get("biTitle"));
