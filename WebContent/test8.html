@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var xhr = new XMLHttpRequest();
+//전화기 생성
+xhr.open('GET','/test');
+//문자를 보낼 것인지 전화를 보낼 것인지 
+xhr.onreadystatechange = function(){
+	if(xhr.readyState==4){
+		if(xhr.status==200){
+			console.log(JSON.parse(xhr.responseText));
+			document.write(xhr.responseText);
+			// 무엇을 할지 
+		}else{
+			document.write(xhr.responseText);
+		}
+	}
+}
+xhr.send();
+//전화를 거는 것
+
+</script>
+
+</body>
+</html>

@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class DBCon {
+public class  DBCon {
 
 	private static  String URL;
 	private static  String ID;
