@@ -26,7 +26,7 @@ public class FindController extends HttpServlet {
 		response.setContentType("application/json;charset=utf-8");
 		PrintWriter pw = response.getWriter();
 
-		List<Map<String,String>> findList = os.selectOnkeyList(null);
+		List<String> findList = os.selectOnkeyList(null);
 		System.out.println(findList);
 		String id = request.getParameter("id");
 		Gson g = new Gson();

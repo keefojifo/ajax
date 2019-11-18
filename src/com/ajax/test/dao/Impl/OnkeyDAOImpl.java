@@ -29,6 +29,7 @@ public class OnkeyDAOImpl implements OnkeyDAO {
 			while (rs.next()) {
 				onkeyList.add(rs.getString("o_color"));
 
+				System.out.println(onkeyList);
 			return onkeyList;
 			}
 		}catch(SQLException e) {
