@@ -32,9 +32,7 @@
 		</table>
 	</div>
 	<script type="text/javascript">
-	function update(){
-		
-	}
+	
 		function ajax(conf) {
 			var xhr = new XMLHttpRequest();
 			xhr.open(conf.method, conf.url);
